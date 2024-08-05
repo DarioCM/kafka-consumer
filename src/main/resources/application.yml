@@ -1,3 +1,4 @@
+#DESserialize  the message from kafka from byte arrays to message objects
 spring:
   kafka:
     consumer:
@@ -5,6 +6,8 @@ spring:
         - localhost:9092
       group-id:
         - group_id
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 
 server:
   port: 9292
