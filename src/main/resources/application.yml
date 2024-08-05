@@ -3,6 +3,8 @@ spring:
     consumer:
       bootstrap-servers:
         - localhost:9092
+      group-id:
+        - group_id
 
 server:
   port: 9292
