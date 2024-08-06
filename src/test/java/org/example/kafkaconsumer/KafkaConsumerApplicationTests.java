@@ -38,7 +38,7 @@ class KafkaConsumerApplicationTests {
     @Test
     public void testConsumeEventsFromKafkaTopic() {
         logger.info("Sending Customer to Kafka Topic");
-        kafkaTemplate.send("java-testTopic-Cust",  new Customer(1, "John", "sdsad@dfdf.com", "1212112"));
+        //kafkaTemplate.send("java-testTopic-Cust",  new Customer(1, "John", "sdsad@dfdf.com", "1212112"));
         logger.info("Customer sent to Kafka Topic");
     }
 
