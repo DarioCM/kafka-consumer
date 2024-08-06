@@ -8,6 +8,9 @@ spring:
         - group_id
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      #trusted packages in order to read them from kafka topic  and convert them to message objects
+      properties:
+          spring.json.trusted.packages: org.example.dto, org.example.kafkaproducer.dto
 
 server:
   port: 9292
