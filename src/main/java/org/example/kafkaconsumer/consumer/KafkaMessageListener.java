@@ -14,10 +14,10 @@ public class KafkaMessageListener {
     Logger logger = LoggerFactory.getLogger(KafkaMessageListener.class);
 
 
-    @KafkaListener(topics = "java-testTopic-1" , groupId = "group_id")
+   /* @KafkaListener(topics = "java-testTopic-1" , groupId = "group_id")
     public void consume(String message) {
         logger.info("Consumed message:  {} " , message);
-    }
+    }*/
 
     @KafkaListener(topics = "java-testTopic-Cust" , groupId = "group_id")
     public void consumeCustomer(Customer customer) {
